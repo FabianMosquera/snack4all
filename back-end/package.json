@@ -1,0 +1,20 @@
+{
+  "name": "snack4all-api",
+  "version": "1.0.0",
+  "description": "This package contains all the api and business logic of our project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joer9514/snack4all"
+  },
+  "author": {
+    "name": "Jose Espinosa",
+    "email": "joer9514@gmail.com",
+    "url": "https://joer9514.netlify.app"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}
