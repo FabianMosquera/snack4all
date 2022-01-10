@@ -13,18 +13,19 @@ const topBar = () => {
   </div>
     
   <ul class="menu">
-    <li class="menu__item">
-        <a class="menu__link" href="#home">Home</a>
-    </li>
-    <li class="menu__item">
-        <a class="menu__link" href="#menu">Menu</a>
-    </li>
-    <li class="menu__item">
-        <a class="menu__link" href="#reserve">Reserves</a>
-    </li>
-    <li class="menu__item">
-        <a class="menu__link" href="#about">About Us</a>
-    </li>
+      <div class="menu__container"></div>
+      <li class="menu__item">
+          <a class="menu__link" href="#home">Home</a>
+      </li>
+      <li class="menu__item">
+          <a class="menu__link" href="#menu">Menu</a>
+      </li>
+      <li class="menu__item">
+          <a class="menu__link" href="#reserve">Reserves</a>
+      </li>
+      <li class="menu__item">
+          <a class="menu__link" href="#about">About Us</a>
+      </li>
   </ul>
     `;
 
@@ -34,8 +35,9 @@ const topBar = () => {
     const $toggle = document.getElementById("toggle");
     const $toggleChange = document.getElementById("toggle_change");
     const $menu = document.querySelector(".menu");
+    const $menuLink = document.querySelectorAll(".menu__link");
 
-    $toggle.addEventListener("click", () => {
+    const openCloseNav = () => {
       $menu.classList.toggle("menu--visible");
 
       if ($menu.classList.contains("menu--visible")) {
@@ -45,6 +47,12 @@ const topBar = () => {
         $toggleChange.setAttribute("class", "fas fa-bars");
         $toggle.style.color = "var(--color-orange-main)";
       }
+    };
+
+    $toggle.addEventListener("click", () => openCloseNav());
+
+    $menuLink.forEach((a) => {
+      a.addEventListener("click", () => openCloseNav());
     });
   })();
 };

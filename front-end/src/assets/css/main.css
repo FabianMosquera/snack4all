@@ -4,10 +4,13 @@
   /* Colors */
   --color-orange-main: #f24e1e;
   --color-orange-dark: #b92b00;
+  --color-grey-light: rgb(201 201, 201);
   /* Props */
   --linear-shadow: 0 0 5px 1px rgb(201, 201, 201);
   /* Fonts */
   --font-regular: normal 300 26px "Outfit";
+  --font-sm-bold: normal 400 26px "Outfit";
+  --font-bold: normal 600 26px "Outfit";
 }
 
 html {
@@ -78,15 +81,18 @@ html {
   transition: 0.3s all ease-out;
 }
 
+.menu__container {
+  margin-top: 80px;
+}
+
 .menu__item {
-  margin-top: 75px;
+  margin-top: 8px;
   padding: 10px;
   list-style: none;
   text-align: center;
 }
 
 .menu__item:hover {
-  transform: translateY(-8px);
   background-color: var(--color-orange-dark);
   transition: 0.5s all ease-out;
 }
@@ -95,4 +101,53 @@ html {
   font: var(--font-regular);
   text-decoration: none;
   color: white;
+}
+
+@media screen and (min-width: 991px) {
+  .nav__toggle {
+    display: none;
+  }
+
+  .menu {
+    width: 500px;
+    height: inherit;
+    transform: translateX(-100px);
+    background-color: inherit;
+    /* Position */
+    position: static;
+    transition: none;
+    /* Flexbox */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu__container {
+    display: none;
+  }
+
+  .menu__item {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  .menu__item:hover {
+    transform: translateY(-6px);
+    background-color: inherit;
+    transition: 0.5s all ease-out;
+  }
+
+  .menu__link {
+    font: var(--font-regular);
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+  }
+
+  .menu__link:hover {
+    color: var(--color-orange-main);
+    transition: 0.3s all ease-out;
+  }
 }
