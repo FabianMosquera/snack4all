@@ -1,5 +1,5 @@
 const topBar = () => {
-  const $app = document.getElementById("app");
+  const $app = document.getElementById("header");
   const $topBar = document.createElement("nav");
 
   $topBar.classList.add("nav");
@@ -15,10 +15,10 @@ const topBar = () => {
   <ul class="menu">
       <div class="menu__container"></div>
       <li class="menu__item">
-          <a class="menu__link" href="#home">Home</a>
+          <a class="menu__link" href=".">Home</a>
       </li>
       <li class="menu__item">
-          <a class="menu__link" href="#menu">Menu</a>
+          <a class="menu__link" href="menu.html">Menu</a>
       </li>
       <li class="menu__item">
           <a class="menu__link" href="#reserve">Reserves</a>
